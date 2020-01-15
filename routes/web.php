@@ -15,4 +15,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('tableview','TableViewController@tablet');
+
+Route::get('tableview/create','TableViewController@create');
+
+Route::get('tableview/store','TableViewController@store');
+
+
+Route::get('tableview/edit/{id}','TableViewController@edit');
+
+Route::get('tableview/update/{id}','TableViewController@update');
+
+Route::get('tableview/delete/{id}','TableViewController@destroy');
+
+
+
+
 
