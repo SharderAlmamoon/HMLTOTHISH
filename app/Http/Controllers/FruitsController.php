@@ -18,6 +18,7 @@ class FruitsController extends Controller
        return view('fruits.create');
    }
    public function store(Request $request){
+       // exit('YES');
        $a['name']=$request->name;
        $a['price']=$request->price;
        $a['details']=$request->details;

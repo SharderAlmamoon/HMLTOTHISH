@@ -49,13 +49,13 @@ Route::get('fruitspage','FruitsController@face');
 
 Route::get('fruitspage/create','FruitsController@create');
 
-Route::get('fruitspage/store','FruitsController@store');
+Route::post('fruitspage/store','FruitsController@store');
 
 Route::get('fruitspage/edit/{id}','FruitsController@edit');
 
-Route::get('fruitspage/edited/{id}','FruitsController@edited');
+Route::put('fruitspage/edited/{id}','FruitsController@edited');
 
-Route::get('fruitspage/delete/{id}','FruitsController@delete');
+Route::delete('fruitspage/delete/{id}','FruitsController@delete');
 
 
 

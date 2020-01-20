@@ -8,7 +8,7 @@
     <title>table</title>
 </head>
 <body>
-<a href="<?php echo url('view/create')?>">CLICKE_STORE</a>
+<a href="{{url('view/create')}}">CLICKE_STORE</a>
 <br><br><br><br>
 <table border="2" cellpadding="10">
     <tr>
@@ -20,14 +20,14 @@
     </tr>
     <?php foreach ($viewon as $ss){?>
     <tr>
-        <td><?php echo $ss->id?></td>
-        <td><?php echo $ss->name?></td>
-        <td><?php echo $ss->email?></td>
-        <td><?php echo $ss->document?></td>
+        <td>{{$ss->id}}</td>
+        <td>{{$ss->name}}</td>
+        <td>{{$ss->email}}</td>
+        <td>{$ss->document}</td>
         <td>
-            <a href="<?php echo url('view/update',$ss->id)?>">EDIT</a>
+            <a href="{{url('view/update',$ss->id}}">EDIT</a>
             ||
-            <a href="<?php echo url('view/delete',$ss->id)?>">DELETE</a>
+            <a href="{{url('view/delete',$ss->id)}}">DELETE</a>
         </td>
     </tr>
     <?php }?>

@@ -10,7 +10,8 @@
 <body>
 <h1 align="center" style="font-family: Verdana;font-size: 40px;color: chocolate;">PUT FRUITS NAME AND INSERT!</h1>
 <!--FORM-->
-<form action="<?php echo url('fruitspage/store')?>">
+<form action="{{url('fruitspage/store')}}" method="post">
+    <input type="hidden" name="_token" value="{{csrf_token()}}">
     <label for="">NAME</label>
     <input type="text" name="name" placeholder="enter fruits name">
     <br><br><br>

@@ -10,15 +10,17 @@
 <body>
 <h1 align="center" style="font-family: Verdana;font-size: 40px;color: chocolate;">EDITE_PAGE HERE!</h1>
 
-<form action="<?php echo url('fruitspage/edited',$all->id)?>">
+<form action="{{url('fruitspage/edited',$all->id)}}" method="post">
+    <input type="hidden" name="_token" value="{{csrf_token()}}">
+    <input type="hidden" name="_method" value="put">
     <label for="">NAME</label>
-    <input type="text" name="name" value="<?php echo $all->name?>">
+    <input type="text" name="name" value="{{$all->name}}">
     <br><br><br>
     <label for="">PRICE</label>
-    <input type="text" name="price" value="<?php echo $all->price?>">
+    <input type="text" name="price" value="{{$all->price}}">
     <br><br><br>
     <label for="">DETAILS</label>
-    <textarea name="details" id="" cols="30" rows="10"><?php echo $all->details?></textarea>
+    <textarea name="details" id="" cols="30" rows="10">{{$all->details}}</textarea>
     <br><br><br>
     <button type="submit">EdItEd</button>
 </form>
