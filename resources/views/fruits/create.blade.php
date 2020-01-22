@@ -14,13 +14,13 @@
 {{--    <input type="hidden" name="_token" value="{{csrf_token()}}">--}}
     @csrf
     <label for="">NAME</label>
-    <input type="text" name="name" placeholder="enter fruits name">
+    <input type="text" name="name" placeholder="enter fruits name" value="{{old('name')}}">
     <br><br><br>
     <label for="">PRICE</label>
-    <input type="text" placeholder="enter price" name="price">
+    <input type="text" placeholder="enter price" name="price" value="{{old('price')}}">
     <br><br><br>
     <label for="">DETAILS</label>
-    <textarea name="details" id="" cols="30" rows="10"></textarea>
+    <textarea name="details" id="" cols="30" rows="10">{{old('details')}}</textarea>
     <br><br><br>
     <button type="submit">StOrE</button>
 </form>
