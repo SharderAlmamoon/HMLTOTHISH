@@ -11,8 +11,10 @@
 <h1 align="center" style="font-family: Verdana;font-size: 40px;color: chocolate;">EDITE_PAGE HERE!</h1>
 
 <form action="{{url('fruitspage/edited',$all->id)}}" method="post">
-    <input type="hidden" name="_token" value="{{csrf_token()}}">
-    <input type="hidden" name="_method" value="put">
+{{--    <input type="hidden" name="_token" value="{{csrf_token()}}">--}}
+    @csrf
+{{--    <input type="hidden" name="_method" value="put">--}}
+    @method('put')
     <label for="">NAME</label>
     <input type="text" name="name" value="{{$all->name}}">
     <br><br><br>
