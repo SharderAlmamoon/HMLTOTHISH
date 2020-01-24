@@ -56,7 +56,18 @@ Route::get('fruitspage/edit/{id}','FruitsController@edit');
 Route::put('fruitspage/edited/{id}','FruitsController@edited');
 
 Route::delete('fruitspage/delete/{id}','FruitsController@delete');
+//STUDENT CRUD
+   Route::get('student','StudentController@view');
 
+   Route::get('student/create','StudentController@create');
+
+   Route::post('student/store','StudentController@store');
+
+   Route::get('student/edit/{id}','StudentController@edit');
+
+   Route::put('student/updated/{id}','StudentController@updated');
+
+   Route::delete('student/delete/{id}','StudentController@delete');
 
 
 
